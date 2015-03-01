@@ -1,0 +1,77 @@
+//=== Input groups
+//
+
+.input-group-addon {
+  border: @input-border-width solid @input-group-addon-border-color;
+  /*background-color: @input-group-addon-border-color;*/
+  color: @text-color;
+  font-size: inherit;
+}
+
+.input-group-btn button {
+  border-width: @input-border-width 0 @input-border-width @input-border-width;
+  border-color: @input-group-addon-border-color;
+  border-style: solid;
+  color: @text-color;
+  height: @input-height-base;
+}
+.form-control + .input-group-btn button {
+  border-width: @input-border-width @input-border-width @input-border-width 0;
+  border-color: @input-group-addon-border-color;
+  border-style: solid;
+  color: @text-color;
+  height: @input-height-base;
+}
+.input-sm ~ .input-group-btn button {
+  height: @input-height-small;
+}
+.form-control + .input-sm ~ .input-group-btn button {
+  height: @input-height-small;
+}
+.input-lg ~ .input-group-btn button {
+  height: @input-height-large;
+}
+.form-control + .input-lg ~ .input-group-btn button {
+  height: @input-height-large;
+}
+
+.input-group-addon.glyphicon {
+  top: auto;
+}
+
+//=== Input groups insets
+//
+.input-group-addon.input-group-inset {
+  background-color: transparent;
+  color: @input-color-placeholder;
+  padding: 0;
+}
+.input-group-inset span {
+  padding: @padding-base-vertical @padding-base-vertical;
+}
+input.inset-align-right {
+  border-right: none;
+}
+.input-group-addon.input-group-inset button {
+  height: (@input-height-base - @input-border-width - @button-depth-width);
+}
+.input-group-addon.input-group-inset button span {
+  padding: 0;
+}
+.input-group-inset+input.form-control {
+  border-left: none;
+}
+.input-group-inset+input.form-control:focus {
+  color: red;
+}
+.form-control:focus+.input-group-addon {
+  border-color: @input-border-focus !important;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}

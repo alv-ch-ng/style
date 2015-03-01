@@ -1,0 +1,246 @@
+//== Base Layout
+//
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+  font-family: @font-family-base;
+  -webkit-font-smoothing: antialiased;
+}
+
+.open-sans {
+  font-family: 'Open Sans';
+}
+
+
+//== FOOTER
+/* Set the fixed height of the footer here */
+#footer {
+  border-style: @footer-border-style;
+  border-width: @footer-border-width;
+  border-color: @footer-border-color;
+  margin: 0;
+}
+
+.footer {
+  border-style: @footer-content-border-style;
+  border-width: @footer-content-border-width;
+  border-color: @footer-content-border-color;
+
+  background-color: @footer-bg;
+  color: @footer-color;
+  padding: @footer-padding;
+}
+
+.footer hr {
+  border-color: @gray;
+}
+
+.footer-sitemap,
+.footer-services{
+  margin-bottom: 1em;
+}
+.footer-copyright {
+  color: @gray-light;
+}
+
+.footer h2 {
+  border-bottom: 1px solid @gray-light;
+  padding: 0 0 0.5em 0;
+  margin: 0 0 0.5em 0;
+}
+.footer ul {
+  padding: 0;
+  //height: 210px;
+  list-style: none;
+  line-height: 1.25;
+}
+.footer ul li {
+  /*display: block;
+  float: left;*/
+  margin: 0 0 15px 0;
+}
+
+//== HR
+hr {
+  border-width: 2px 0 0;
+}
+
+//=== Links and markups
+//
+
+.pointer {
+  cursor: pointer;
+}
+
+a[ng-click] {
+  cursor: pointer;
+}
+
+/*
+a:hover {
+  text-decoration: none;
+  border-bottom: 0.125em solid @link-hover-color;
+}
+*/
+
+/* external link */
+a[href^="http"]:after {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: "\e164";
+}
+
+a[href^="http"]:after img {
+  content: '';
+}
+/* anchor link
+a[href^="#"]:before {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: "\e114";
+}
+
+a[href^="#"]:before img {
+  content: '';
+}
+a[href^="#/"]:before {
+  content: "";
+}
+*/
+
+//== DIVIDER
+
+//=== Umgebungen und Alpha / Beta
+//
+.release-note {
+  position: inherit;
+  margin: -@font-size-base 0 0 0;
+  height: @font-size-base;
+}
+.release-note p {
+  display: none;
+}
+
+.release-note.show {
+  background-color: @body-bg;
+  position: static;
+  margin: 0;
+  padding: 0;
+  height: (2*@line-height-computed);
+}
+.release-note.show p {
+  display: inline-block;
+  padding: @padding-large-vertical @padding-large-horizontal;
+}
+
+.alpha a, .alpha span, p.alpha,
+.beta a, .beta span, p.beta,
+.rc a, .rc span, p.rc,
+.poc a, .poc span, p.poc {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  text-align: center;
+  font-size: 10px;
+  width: (@font-size-base*5);
+  float: left;
+  min-height: @font-size-base;
+}
+
+.show.alpha a,
+.show.beta a,
+.show.rc a,
+.show.poc a {
+  padding: @padding-large-vertical @padding-large-horizontal;
+  font-size: inherit;
+  font-weight: bold;
+  position: relative;
+  margin-right: @padding-large-horizontal;
+  width: auto;
+  height: 100%;
+}
+
+.alpha a,.alpha span,p.alpha {
+  background-color: @alv-alpha;
+  color: #ffffff;
+}
+.beta a,.beta span,p.beta {
+  background-color: @alv-beta;
+  color: #ffffff;
+}
+.rc a,.rc span,p.rc {
+  background-color: @alv-rc;
+  color: #ffffff;
+}
+.poc a,.poc span,p.poc {
+  background-color: @alv-poc;
+  color: #000000;
+}
+
+.staging .navbar:after,
+.combat .navbar:after,
+.test .navbar:after,
+.dev .navbar:after {
+  content: "STAGING";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: @alv-staging;
+}
+.combat .navbar:after {
+  content: "COMBAT TESTING";
+  color: @alv-combat;
+}
+.test .navbar:after {
+  content: "TEST";
+  color: @alv-combat;
+}
+.dev .navbar:after {
+  content: "DEVELOPMENT";
+  color: @alv-dev;
+}
+
+//== CD Bund
+//
+.cd-bund {
+  display: inline-block;
+  //float: left;
+}
+.cd-bund img {
+  border-right: 1px solid @gray-light;
+  padding-right: 2.5em;
+  float: left;
+  width: 220px;
+}
+.cd-bund h1 {
+  color: #000;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 1.3;
+  margin: 0;
+  padding-left: 26px;
+  float: left;
+}

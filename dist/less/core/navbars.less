@@ -1,0 +1,364 @@
+//== SYSTEMBAR
+.systembar {
+  z-index: 3000 !important;
+  margin-bottom: 0;
+  background-color: @systembar-default-bg;
+
+  @media (max-width: @screen-sm-max) {
+    display: none;
+  }
+}
+
+//== NAVBAR
+.navbar {
+  z-index: 3000 !important; // todo var!!
+}
+div.navbar-brand.alv a {
+  font-size: 1.4em;
+  color: #ffffff;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  vertical-align: top;
+  overflow: visible;
+  margin-bottom: -1px;
+  padding-bottom: 1px;
+}
+div.navbar-brand.alv a:hover,
+div.navbar-brand.alv a:focus {
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 0;
+}
+div.navbar-brand.alv img {
+  width: 30px;
+  position: relative;
+  top: -4px;
+}
+div.navbar-brand.alv span {
+  position: relative;
+  top: -2px;
+  padding-left: ceil(@font-size-base / 4);
+}
+
+.navbar-right li:last-child {
+  margin-right: 0 !important;
+}
+
+.navbar-right li:last-child form {
+  padding-right: 0 !important;
+}
+.navbar-nav li.active {
+  font-weight: bold;
+}
+
+//== SUBNAVBAR
+.subnavbar {
+  z-index: 3000 !important;
+  margin-bottom: 0;
+  background-color: @subnavbar-default-bg;
+  color: @subnavbar-default-color;
+  font-size: @font-size-small;
+
+  @media (max-width: @screen-sm-min) {
+
+  }
+}
+
+.subnavbar .navbar-right {
+  margin-right: 0;
+}
+
+//== HIGHLIGHT
+.navbar-highlight.navbar-right {
+  margin-right: -(@grid-gutter-width/2);
+}
+.navbar-highlight.navbar-right li:last-child {
+  padding-right: (@grid-gutter-width/2);
+}
+
+//== SIDEBAR
+.sidebar {
+  float: left;
+  position: relative;
+  width: percentage((2 / @grid-columns));
+  z-index: 1000;
+}
+
+// sidebar right
+.content {
+  float: left;
+  width: percentage((10 / @grid-columns));
+  padding-left: 0;
+  padding-right: (@grid-gutter-width/2);
+}
+// sidebar left
+.sidebar ~ .content {
+  padding-left: (@grid-gutter-width/2);
+  padding-right: 0;
+}
+
+// Sidebar toggle
+//
+// Custom button for toggling the `.navbar-collapse`, powered by the collapse
+// JavaScript plugin.
+
+.sidebar-toggle {
+  position: relative;
+  float: right;
+  margin-right: @navbar-padding-horizontal;
+  padding: 9px 10px;
+  .navbar-vertical-align(34px);
+  background-color: transparent;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  border-radius: @border-radius-base;
+
+  // We remove the `outline` here, but later compensate by attaching `:hover`
+  // styles to `:focus`.
+  &:focus {
+    outline: 0;
+  }
+
+  // Bars
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+  }
+  .icon-bar + .icon-bar {
+    margin-top: 4px;
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    display: none;
+  }
+}
+
+// navbar & sidebar customs
+.navbar-toggle .icon-bar,
+.sidebar-toggle .icon-bar {
+  height: 3px;
+}
+.navbar-toggle,
+.sidebar-toggle {
+  border: none;
+}
+
+// navbar customs
+.navbar-toggle {
+  margin-right: 0;
+}
+
+// sidebar customs
+.sidebar-toggle {
+  float: left;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 9px 0 9px 0;
+}
+.navbar-inverse .sidebar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.sidebar-toggle .icon-bar {
+  width: 10px;
+}
+
+@media (max-width: @screen-xs-max) {
+  .sidebar-toggle.ng-show ~ .navbar-brand {
+    padding-left: 5px !important;
+  }
+  .sidebar {
+    position: fixed !important;
+    top: @navbar-height;
+    left: 0;
+    height: 100% !important;
+    //display: none;
+    background-color: @navbar-inverse-bg;
+    color: @navbar-inverse-link-color;
+    width: percentage((8 / @grid-columns));
+    padding: 0 10px;
+    z-index: 3000 !important;
+  }
+  .sidebar #toc-container {
+    top: inherit !important;
+    width: 100% !important;
+  }
+  .sidebar span {
+    font-weight: bold;
+  }
+  .sidebar a {
+    color: @navbar-inverse-link-color;
+  }
+  .content {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+//== i18n-switcher
+//
+#i18n-switch {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#i18n-switch li {
+  float: left;
+  margin: 0 2px;
+}
+#i18n-switch li a {
+  display: block;
+  padding: @nav-link-padding;
+  height: @navbar-height;
+  color: @navbar-default-link-color;
+  text-decoration: none;
+}
+.navbar-inverse #i18n-switch li a {
+  color: @navbar-inverse-link-color;
+}
+#i18n-switch li a.active {
+  font-weight: bold;
+}
+#i18n-switch li a:hover,
+#i18n-switch li a.active {
+  background-color: @navbar-default-link-hover-bg;
+}
+.navbar-inverse #i18n-switch li a:hover,
+.navbar-inverse #i18n-switch li a.active {
+  background-color: @navbar-inverse-link-hover-bg;
+}
+
+//== CUSTOM NAVBAR-INVERSE
+.navbar-alternative {
+  background-color: @navbar-alternative-bg;
+  border-color: @navbar-alternative-border;
+
+  .navbar-brand {
+    color: @navbar-alternative-brand-color;
+    &:hover,
+    &:focus {
+      color: @navbar-alternative-brand-hover-color;
+      background-color: @navbar-alternative-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: @navbar-alternative-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @navbar-alternative-link-color;
+
+      &:hover,
+      &:focus {
+        color: @navbar-alternative-link-hover-color;
+        background-color: @navbar-alternative-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-alternative-link-active-color;
+        background-color: @navbar-alternative-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-alternative-link-disabled-color;
+        background-color: @navbar-alternative-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: @navbar-alternative-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: @navbar-alternative-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: @navbar-alternative-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken(@navbar-alternative-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-alternative-link-active-bg;
+        color: @navbar-alternative-link-active-color;
+      }
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: @navbar-alternative-border;
+        }
+        .divider {
+          background-color: @navbar-alternative-border;
+        }
+        > li > a {
+          color: @navbar-alternative-link-color;
+          &:hover,
+          &:focus {
+            color: @navbar-alternative-link-hover-color;
+            background-color: @navbar-alternative-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-alternative-link-active-color;
+            background-color: @navbar-alternative-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-alternative-link-disabled-color;
+            background-color: @navbar-alternative-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: @navbar-alternative-link-color;
+    &:hover {
+      color: @navbar-alternative-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: @navbar-alternative-link-color;
+    &:hover,
+    &:focus {
+      color: @navbar-alternative-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: @navbar-alternative-link-disabled-color;
+      }
+    }
+  }
+}

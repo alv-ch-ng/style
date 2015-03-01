@@ -1,0 +1,78 @@
+//=== Placeholder Labels
+//
+
+// placeholder label outside/top
+.form-group.placeholder-label,
+.form-group.placeholder-inside,
+.form-group.placeholder-outline {
+  padding-top: @placeholder-label-margin;
+}
+
+.placeholder-label-text,
+.placeholder-inside-text,
+.placeholder-outline-text{
+  float: left;
+  position: relative;
+  top: -( (@input-height-base+@placeholder-label-margin)+@input-border-width );
+  margin-bottom: -@input-border-width;
+
+  font-size: 0.85em;
+  font-weight: bold;
+  color: @input-color;
+}
+
+input:focus ~ .placeholder-label-text,
+input:focus ~ .placeholder-outline-text{
+  color: @input-border-focus;
+}
+
+// placeholder label inside/top
+.placeholder-inside-text {
+  background-color: @input-border;
+  width: 100%;
+  color: #ffffff;
+  top: -(@input-height-base+@placeholder-label-margin);
+  margin-bottom: -@input-border-width;
+  padding-left: (@padding-base-horizontal+@input-border-width);
+}
+
+input:focus ~ .placeholder-inside-text {
+  background-color: @input-border-focus;
+}
+
+// placeholder inside/top only text
+.placeholder-outline .active {
+  margin-top: -@placeholder-label-margin;
+  height: (@input-height-base+@placeholder-label-margin+@input-border-width);
+  padding-top: (@padding-base-vertical*3);
+}
+
+.placeholder-outline-text {
+  top: -( (@input-height-base+@placeholder-label-margin)-@input-border-width);
+  padding-left: (@padding-base-horizontal+@input-border-width);
+}
+
+// placeholder and login mask
+form.form-login:after {
+  content: "Sign in";
+  position: absolute;
+  top: @form-login-inside;
+  left: @form-login-padding;
+  font-size: 12px;
+  font-weight: 700;
+  color: @gray-light;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+//=== Input Help text
+//
+
+.help-block {
+  color: @gray-light;
+}
+.checkbox .help-block,
+.radio .help-block{
+  margin-bottom: 0;
+}

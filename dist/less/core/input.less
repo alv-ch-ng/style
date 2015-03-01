@@ -1,0 +1,77 @@
+// Tag Input
+//
+
+.tag {
+  padding: floor(@padding-base-vertical/2) floor(@padding-base-horizontal/2);
+  font-size: 95%;
+  display: inline;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  background-color: @gray-lighter;
+  margin-right: @padding-base-vertical;
+}
+
+.tag .close {
+  float: inherit;
+  margin-left: @padding-base-vertical;
+  font-size: 1.5em;
+  vertical-align: baseline;
+}
+
+input.tag-input {
+  height: 100%;
+  border: none;
+}
+input.tag-input:focus {
+  outline: none;
+  border: none;
+}
+
+.tag-default {
+  .label-variant(@gray-lighter);
+}
+
+.tag-primary {
+  .label-variant(@label-primary-bg);
+}
+
+.tag-success {
+  .label-variant(@label-success-bg);
+}
+
+.tag-info {
+  .label-variant(@label-info-bg);
+}
+
+.tag-warning {
+  .label-variant(@label-warning-bg);
+}
+
+.tag-danger {
+  .label-variant(@label-danger-bg);
+}
+
+//== AUTOCOMPLETER
+.form-auto-complete > .dropdown-menu {
+  top: inherit;
+  left: inherit;
+  display: block;
+}
+
+/*
+check
+
+width: 12px;
+height: 6px;
+background: 0 0;
+top: 7px;
+left: 6px;
+*/
+
+/*
+radio
+
+
+*/

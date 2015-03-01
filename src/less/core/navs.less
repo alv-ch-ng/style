@@ -1,0 +1,84 @@
+//== SYSTEMNAVBAR
+.systembar .navbar-nav {
+
+  > li {
+    margin: 0 @navbar-padding-horizontal 0 0;
+    padding: 0;
+  }
+
+  > li > a {
+    padding: 6px 0;
+    line-height: @line-height-computed;
+    font-size: @font-size-small;
+    color: @systembar-default-color;
+  }
+
+  > li > a:hover {
+    padding-top: 4px;
+    border-top: 2px solid @systembar-default-link-color;
+    color: @systembar-default-link-hover-color;
+  }
+
+  > li > a:active,
+  > li.active > a{
+    padding-top: 4px;
+    border-top: 2px solid @systembar-default-link-color;
+    color: @systembar-default-link-color;
+  }
+}
+
+//== SUBNAVBAR
+.subnavbar .nav {
+  > li {
+
+    > a {
+      padding: @nav-link-padding;
+      color: @subnavbar-default-link-color;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: @subnavbar-default-link-hover-color;
+        background-color: @subnavbar-default-bg-hover-color;
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: @subnavbar-disabled-link-color;
+
+      &:hover,
+      &:focus {
+        color: @subnavbar-disabled-link-hover-color;
+      }
+    }
+  }
+}
+
+//== HIGHLIGHTS
+.navbar-highlight {
+  > li {
+    font-weight: bold;
+    background-color: @navbar-highlight-bg;
+    color: @navbar-highlight-color !important;
+    > a {
+      color: @navbar-highlight-color !important;
+      &:hover,
+      &:focus {
+        color: @navbar-highlight-color !important;
+        background-color: @navbar-highlight-bg-hover !important;
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: darken(@navbar-highlight-color, 10%);
+
+      &:hover,
+      &:focus {
+        color: darken(@navbar-highlight-color, 10%);
+      }
+    }
+  }
+}
+
+

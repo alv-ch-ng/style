@@ -1,0 +1,49 @@
+//=== Datepicker / Calendar
+//
+
+.datepicker {
+  font-size: 0.85em;
+  line-height: 24px; /* calc!  */
+}
+
+.datepicker tbody tr {
+  border-top: 1px solid @gray-lighter;
+}
+
+.datepicker .prev {
+  border-radius: @border-radius-base;
+}
+.datepicker .next {
+  border-radius: @border-radius-base;
+}
+.datepicker .datepicker-switch {
+  border-radius: @border-radius-base;
+}
+
+.datepicker .old,
+.datepicker .new,
+.datepicker .disabled {
+  color: @gray-lighter;
+}
+
+.datepicker .today,
+.datepicker .clear,
+.datepicker .day.active,
+.datepicker .day:hover,
+.datepicker .month,
+.datepicker .year {
+  border-radius: @border-radius-base;
+}
+.datepicker .day.today {
+  background-color: @ch-red;
+  font-weight: bold;
+  color: #fff;
+}
+.datepicker .day:hover {
+  font-weight: bold;
+  background-color: @gray-lighter;
+}
+.datepicker .day.active {
+  font-weight: bold;
+  background-color: #000000;
+}

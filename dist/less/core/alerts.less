@@ -1,0 +1,72 @@
+//== ALERTS
+
+.system-messages .alert span {
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+  .container-fluid-fixed();
+  display: block;
+}
+body.fluid .system-messages .alert span {
+  width: auto;
+
+  @media (min-width: @screen-sm-min) {
+    width: auto;
+  }
+  @media (min-width: @screen-md-min) {
+    width: auto;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: auto;
+  }
+}
+.alert {
+  margin-top: 1px;
+  margin-bottom: 0;
+}
+.alert:first-child {
+  margin-top: 0;
+}
+
+.system-messages .alert.alert-dismissable span {
+  padding-right: 0;
+  padding-left: 0;
+}
+/* calc( (100% - (1170px - 90px) ) / 2 ) */
+.system-messages .alert.alert-dismissable {
+  @media (min-width: @screen-sm-min) {
+    padding-right: calc(~'(100% - ' ( @container-sm - @system-alert-padding ) ~') / 2');
+    padding-left: calc(~'(100% - ' ( @container-sm - @system-alert-padding + ( @alert-padding * 2) ) ~') / 2' );
+  }
+  @media (min-width: @screen-md-min) {
+    padding-right: calc(~'(100% - ' ( @container-md - @system-alert-padding ) ~') / 2' );
+    padding-left: calc(~'(100% - ' ( @container-md - @system-alert-padding + ( @alert-padding * 2) ) ~') / 2' );
+  }
+  @media (min-width: @screen-lg-min) {
+    padding-right: calc(~'(100% - ' ( @container-lg - @system-alert-padding ) ~') / 2' );
+    padding-left: calc(~'(100% - ' ( @container-lg - @system-alert-padding + ( @alert-padding * 2) ) ~') / 2' );
+  }
+}
+body.fluid .system-messages .alert.alert-dismissable {
+  padding-right: (3 * @alert-padding);
+  padding-left: @alert-padding;
+
+  @media (min-width: @screen-sm-min) {
+    padding-right: (3 * @alert-padding);
+    padding-left: @alert-padding;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-right: (3 * @alert-padding);
+    padding-left: @alert-padding;
+  }
+  @media (min-width: @screen-lg-min) {
+    padding-right: (3 * @alert-padding);
+    padding-left: @alert-padding;
+  }
+}

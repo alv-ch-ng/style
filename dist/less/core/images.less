@@ -1,0 +1,27 @@
+//=== Images
+//
+
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid @gray;
+  border: 1px solid rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.bg {
+  height: calc(~'100% - ( @{navbar-height} + @{footer-border-top} )');
+  background-size: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.bg.bundeshaus {
+  background-image: url('/demo/images/bundeshaus.jpg');
+}

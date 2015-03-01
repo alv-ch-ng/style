@@ -1,0 +1,19 @@
+//=== Kacheln
+//
+.tiles {
+  margin-top: @grid-gutter-width;
+}
+.tiles .tile {
+  border: 1px solid @gray-lighter;
+  padding: @tiles-gutter;
+  height: 200px;
+  font-size: @font-size-small;
+}
+.tile h2,
+.tile h3 {
+  margin: (2*@tiles-gutter) 0;
+}
+.tile .tile-footer {
+  position: absolute;
+  bottom: @tiles-gutter;
+}

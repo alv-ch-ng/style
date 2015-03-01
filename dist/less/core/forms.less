@@ -1,0 +1,214 @@
+//=== Forms
+//
+
+fieldset.form-login {
+  padding: @form-login-padding;
+  padding-top: (@form-login-padding+@form-login-inside);
+  width: 300px;
+}
+.form-control {
+  border-width: @input-border-width;
+  box-shadow: none;
+}
+
+.form-overflow {
+  position: relative;
+  z-index: 2000;
+}
+
+textarea.form-resize-sm:focus {
+  /* on focus, it shows 5 lines */
+  height: calc(~'@{line-height-computed} * 6');
+}
+textarea.form-resize-md:focus {
+  /* on focus, it shows 10 lines */
+  height: calc(~'@{line-height-computed} * 11');
+}
+textarea.form-resize-lg:focus {
+  /* on focus, it shows 15 lines */
+  height: calc(~'@{line-height-computed} * 16');
+}
+/* inline forms */
+form.form-inline textarea,
+form.form-inline textarea:focus {
+  height: @input-height-base;
+}
+.radio-inline,
+.checkbox-inline {
+  padding-left: 0;
+}
+form.form-inline .radio-inline,
+form.form-inline .checkbox-inline {
+  padding-left: 20px;
+}
+form.form-inline .radio,
+form.form-inline .checkbox {
+  padding-left: 10px;
+}
+
+//=== Radio/Checkbox
+//
+
+.checkbox {
+  position: relative;
+  width: auto;
+}
+.checkbox .box {
+  cursor: pointer;
+  position: absolute;
+  width: @line-height-computed;
+  height: @line-height-computed;
+  top: 0;
+  left: 0;
+  background: @input-bg;
+  border: @input-border-width solid @input-border;
+}
+.checkbox .box:after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.6em;
+  height: 0.45em;
+  background: transparent;
+  top: ceil(@font-size-base / 3) + 1;
+  left: ceil(@font-size-base / 3) + 1;
+  border: 3px solid @input-color;
+  border-top: none;
+  border-right: none;
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.radio {
+  position: relative;
+  width: auto;
+}
+.radio .box {
+  display: block;
+  width: @line-height-computed;
+  height: @line-height-computed;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  position: absolute;
+  background: @input-bg;
+  border: @input-border-width solid @input-border;
+}
+.radio .box:after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+  background: @input-color;
+  top: 0.4em;
+  left: 0.4em;
+  border-radius: 100%;
+}
+.checkbox .box:hover::after,
+.radio .box:hover::after {
+  opacity: 0.5;
+}
+.checkbox input[type=checkbox],
+.radio input[type=radio]{
+  margin-left: 0;
+}
+.checkbox input[type=checkbox]:checked + label .box:after,
+.radio input[type=radio]:checked + label .box:after {
+  opacity: 1;
+}
+.checkbox label span.checkbox-label,
+.radio label span.radio-label {
+  margin-left: (@input-height-base / 2);
+  font-weight: bold;
+  width: 100%;
+}
+.radio input[type=radio],
+.checkbox input[type=checkbox] {
+  display: none;
+}
+
+// bootstrap corrections
+.form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+  padding-top: 0;
+}
+
+.alv-check {
+  padding-left: 0;
+}
+.alv-check div {
+  margin-right: 10px;
+  float: left;
+}
+form.form-inline .alv-check {
+  padding-right: 20px;
+}
+
+.form-control:focus {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+// Login
+// placeholder and login mask
+form.form-login:after {
+  content: "Sign in";
+  position: absolute;
+  top: @form-login-inside;
+  left: @form-login-padding;
+  font-size: 12px;
+  font-weight: 700;
+  color: @gray-light;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+form.form-login .form-group,
+form.form-login .checkbox,
+form.form-login .radio {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: 0;
+  vertical-align: bottom;
+  width: 100%;
+}
+form.form-login .checkbox,
+form.form-login .radio {
+  margin-bottom: @padding-base-vertical;
+}
+form.form-login .placeholder-label-text,
+form.form-login .placeholder-inside-text,
+form.form-login .placeholder-outline-text{
+  margin-bottom: 0;
+  margin-top: -(@placeholder-label-margin + @input-border-width);
+  top: -@input-height-base;
+}
+
+// form-login remember-me and sign-in button on right
+form.form-login .checkbox {
+  margin-top: @placeholder-label-margin;
+  width: 75%;
+}
+form.form-login button {
+  margin-top: @placeholder-label-margin;
+  float: right;
+  width: 25%;
+}
+
+.form-show {
+  display: inline;
+}
+.form-hide {
+  display: none;
+}
+
+.form-control {
+  padding: @padding-base-vertical floor(@padding-base-horizontal/2);
+}
+div.form-control {
+  padding: 0 floor(@padding-base-horizontal/2);
+}

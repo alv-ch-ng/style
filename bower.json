@@ -27,7 +27,7 @@
     "bootstrap": "v3.3.1",
     "bootstrapaccessibilityplugin": "v1.0.4",
     "jquery": "2.1.1",
-    "ng-lodash":"latest"
+    "ng-lodash": "latest"
   },
   "devDependencies": {
     "alv-ch-ng.core": "latest",
@@ -51,5 +51,8 @@
   "moduleType": [
     "node"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "authors": [
+    "Thomas D'Ascoli <thomas@dasco.li>"
+  ]
 }

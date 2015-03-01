@@ -53,7 +53,9 @@
                         ieCompat: true
                     },
                     files: {
-                        'dist/css/alv-ch-ng.bootstrap.css': ['src/less/style.less']
+                        'dist/css/alv-ch-ng.bootstrap.css': ['src/less/style.less'],
+                        'dist/css/frutiger.css': ['src/less/typo/frutiger.less'],
+                        'dist/css/admin-symbols.css': ['src/less/typo/admin-symbols.less']
                     }
                 }
             },
@@ -91,7 +93,9 @@
                 },
                 prod: {
                     files: {
-                        'dist/css/alv-ch-ng.bootstrap.css': ['dist/css/alv-ch-ng.bootstrap.css']
+                        'dist/css/alv-ch-ng.bootstrap.css': ['dist/css/alv-ch-ng.bootstrap.css'],
+                        'dist/css/frutiger.css': ['dist/css/frutiger.css'],
+                        'dist/css/admin-symbols.css': ['dist/css/admin-symbols.css']
                     }
                 }
             },
@@ -101,7 +105,9 @@
                 },
                 prod: {
                     files: {
-                        'dist/css/alv-ch-ng.bootstrap.min.css': ['dist/css/alv-ch-ng.bootstrap.css']
+                        'dist/css/alv-ch-ng.bootstrap.min.css': ['dist/css/alv-ch-ng.bootstrap.css'],
+                        'dist/css/frutiger.min.css': ['dist/css/frutiger.css'],
+                        'dist/css/admin-symbols-min.css': ['dist/css/admin-symbols.css']
                     }
                 }
             },
@@ -111,7 +117,9 @@
                         mode: 'gzip'
                     },
                     files: [
-                        { src: ['dist/css/alv-ch-ng.bootstrap.min.css'], dest: 'dist/css/alv-ch-ng.bootstrap.min.css' }
+                        { src: ['dist/css/alv-ch-ng.bootstrap.min.css'], dest: 'dist/css/alv-ch-ng.bootstrap.min.css' },
+                        { src: ['dist/css/frutiger.min.css'], dest: 'dist/css/frutiger.min.css' },
+                        { src: ['dist/css/admin-symbols.min.css'], dest: 'dist/css/admin-symbols.min.css' }
                     ]
                 }
             },

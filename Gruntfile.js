@@ -107,7 +107,7 @@
                     files: {
                         'dist/css/alv-ch-ng.bootstrap.min.css': ['dist/css/alv-ch-ng.bootstrap.css'],
                         'dist/css/frutiger.min.css': ['dist/css/frutiger.css'],
-                        'dist/css/admin-symbols-min.css': ['dist/css/admin-symbols.css']
+                        'dist/css/admin-symbols.min.css': ['dist/css/admin-symbols.css']
                     }
                 }
             },

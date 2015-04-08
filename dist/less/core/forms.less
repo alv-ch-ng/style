@@ -56,8 +56,8 @@ form.form-inline .checkbox {
 .checkbox .box {
   cursor: pointer;
   position: absolute;
-  width: @line-height-computed;
-  height: @line-height-computed;
+  width: @form-radio-width;
+  height: @form-radio-height;
   top: 0;
   left: 0;
   background: @input-bg;
@@ -67,11 +67,11 @@ form.form-inline .checkbox {
   opacity: 0;
   content: '';
   position: absolute;
-  width: 0.6em;
-  height: 0.45em;
+  width: @form-checkbox-tick-width;
+  height: @form-checkbox-tick-height;
   background: transparent;
-  top: ceil(@font-size-base / 3) + 1;
-  left: ceil(@font-size-base / 3) + 1;
+  top: @form-checkbox-tick-offset;
+  left: @form-checkbox-tick-offset;
   border: 3px solid @input-color;
   border-top: none;
   border-right: none;
@@ -88,8 +88,8 @@ form.form-inline .checkbox {
 }
 .radio .box {
   display: block;
-  width: @line-height-computed;
-  height: @line-height-computed;
+  width: @form-radio-width;
+  height: @form-radio-height;
   top: 0;
   left: 0;
   border-radius: 100%;
@@ -101,11 +101,11 @@ form.form-inline .checkbox {
   opacity: 0;
   content: '';
   position: absolute;
-  width: 0.6em;
-  height: 0.6em;
+  width: @form-radio-circle;
+  height: @form-radio-circle;
   background: @input-color;
-  top: 0.4em;
-  left: 0.4em;
+  top: @form-radio-circle-offset;
+  left: @form-radio-circle-offset;
   border-radius: 100%;
 }
 .checkbox .box:hover::after,

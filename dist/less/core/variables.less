@@ -407,6 +407,16 @@
 @form-login-padding:            10px;
 @form-login-inside:             5px;
 
+//== Radiobox/Checkbox
+//
+
+@form-radio-height:             ceil(ceil(@line-height-computed)/2)*2;
+@form-radio-width:              @form-radio-height;
+@form-radio-circle:             ceil(@form-radio-height/3);
+@form-radio-circle-offset:      floor(@form-radio-height/3)-@input-border-width;
+@form-checkbox-tick-height:     floor(@form-radio-height/3)-@input-border-width;
+@form-checkbox-tick-width:      @form-radio-circle+@input-border-width;
+@form-checkbox-tick-offset:     @form-checkbox-tick-height;
 
 //=== Alerts
 //

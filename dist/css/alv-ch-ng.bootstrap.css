@@ -7983,8 +7983,8 @@ form.form-inline .checkbox {
 .checkbox .box {
     cursor: pointer;
     position: absolute;
-    width: 27px;
-    height: 27px;
+    width: 28px;
+    height: 28px;
     top: 0;
     left: 0;
     background: #ffffff;
@@ -7995,8 +7995,8 @@ form.form-inline .checkbox {
     opacity: 0;
     content: '';
     position: absolute;
-    width: 0.6em;
-    height: 0.45em;
+    width: 12px;
+    height: 7px;
     background: transparent;
     top: 7px;
     left: 7px;
@@ -8017,8 +8017,8 @@ form.form-inline .checkbox {
 
 .radio .box {
     display: block;
-    width: 27px;
-    height: 27px;
+    width: 28px;
+    height: 28px;
     top: 0;
     left: 0;
     border-radius: 100%;
@@ -8031,11 +8031,11 @@ form.form-inline .checkbox {
     opacity: 0;
     content: '';
     position: absolute;
-    width: 0.6em;
-    height: 0.6em;
+    width: 10px;
+    height: 10px;
     background: #555555;
-    top: 0.4em;
-    left: 0.4em;
+    top: 7px;
+    left: 7px;
     border-radius: 100%;
 }
 
@@ -8661,6 +8661,8 @@ radio
     box-shadow: 0 4px 0 0 #c9302c;
 }
 
+.btn-plain,
+.btn-plain:active,
 .input-group-btn > .btn,
 .input-group-btn > .btn:active,
 .input-group-addon > .btn,

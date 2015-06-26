@@ -70,8 +70,8 @@
                         },
                         {
                             expand: true,
-                            cwd: 'lib/bootstrap/',
-                            src: 'fonts/*',
+                            cwd: 'lib/bootstrap/fonts',
+                            src: '*',
                             dest: 'dist/fonts'
                         }
                     ]

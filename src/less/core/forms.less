@@ -9,6 +9,10 @@ fieldset.form-login {
 .form-control {
   border-width: @input-border-width;
   box-shadow: none;
+  @media (max-width: @screen-md-max) {
+    height: @input-height-small; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    font-size: @font-size-small;
+  }
 }
 
 .form-overflow {
@@ -19,19 +23,31 @@ fieldset.form-login {
 textarea.form-resize-sm:focus {
   /* on focus, it shows 5 lines */
   height: calc(~'@{line-height-computed} * 6');
+  @media (max-width: @screen-md-max) {
+    height: calc(~'@{line-height-computed-small} * 6');
+  }
 }
 textarea.form-resize-md:focus {
   /* on focus, it shows 10 lines */
   height: calc(~'@{line-height-computed} * 11');
+  @media (max-width: @screen-md-max) {
+    height: calc(~'@{line-height-computed-small} * 11');
+  }
 }
 textarea.form-resize-lg:focus {
   /* on focus, it shows 15 lines */
   height: calc(~'@{line-height-computed} * 16');
+  @media (max-width: @screen-md-max) {
+    height: calc(~'@{line-height-computed-small} * 16');
+  }
 }
 /* inline forms */
 form.form-inline textarea,
 form.form-inline textarea:focus {
   height: @input-height-base;
+  @media (max-width: @screen-md-max) {
+    height: @input-height-small;
+  }
 }
 .radio-inline,
 .checkbox-inline {
@@ -58,6 +74,10 @@ form.form-inline .checkbox {
   position: absolute;
   width: @form-radio-width;
   height: @form-radio-height;
+  @media (max-width: @screen-md-max) {
+    width: @form-radio-width-small;
+    height: @form-radio-height-small;
+  }
   top: 0;
   left: 0;
   background: @input-bg;
@@ -72,6 +92,12 @@ form.form-inline .checkbox {
   background: transparent;
   top: @form-checkbox-tick-offset;
   left: @form-checkbox-tick-offset;
+  @media (max-width: @screen-md-max) {
+    width: @form-checkbox-tick-width-small;
+    height: @form-checkbox-tick-height-small;
+    top: @form-checkbox-tick-offset-small;
+    left: @form-checkbox-tick-offset-small;
+  }
   border: 3px solid @input-color;
   border-top: none;
   border-right: none;
@@ -90,6 +116,10 @@ form.form-inline .checkbox {
   display: block;
   width: @form-radio-width;
   height: @form-radio-height;
+  @media (max-width: @screen-md-max) {
+    width: @form-radio-width-small;
+    height: @form-radio-width-small;
+  }
   top: 0;
   left: 0;
   border-radius: 100%;
@@ -106,6 +136,12 @@ form.form-inline .checkbox {
   background: @input-color;
   top: @form-radio-circle-offset;
   left: @form-radio-circle-offset;
+  @media (max-width: @screen-md-max) {
+    width: @form-radio-circle-small;
+    height: @form-radio-circle-small;
+    top: @form-radio-circle-offset-small;
+    left: @form-radio-circle-offset-small;
+  }
   border-radius: 100%;
 }
 .checkbox .box:hover::after,
@@ -123,6 +159,9 @@ form.form-inline .checkbox {
 .checkbox label span.checkbox-label,
 .radio label span.radio-label {
   margin-left: (@input-height-base / 2);
+  @media (max-width: @screen-md-max) {
+    margin-left: (@input-height-small / 2);
+  }
   font-weight: bold;
   width: 100%;
 }
@@ -186,6 +225,9 @@ form.form-login .placeholder-outline-text{
   margin-bottom: 0;
   margin-top: -(@placeholder-label-margin + @input-border-width);
   top: -@input-height-base;
+  @media (max-width: @screen-md-max) {
+    top: -@input-height-small;
+  }
 }
 
 // form-login remember-me and sign-in button on right

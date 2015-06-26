@@ -14,6 +14,9 @@
   border-style: solid;
   color: @text-color;
   height: @input-height-base;
+  @media (max-width: @screen-md-max) {
+    height: @input-height-small;
+  }
 }
 .form-control + .input-group-btn button {
   border-width: @input-border-width @input-border-width @input-border-width 0;
@@ -21,6 +24,9 @@
   border-style: solid;
   color: @text-color;
   height: @input-height-base;
+  @media (max-width: @screen-md-max) {
+    height: @input-height-small;
+  }
 }
 .input-sm ~ .input-group-btn button {
   height: @input-height-small;
@@ -54,6 +60,9 @@ input.inset-align-right {
 }
 .input-group-addon.input-group-inset button {
   height: (@input-height-base - @input-border-width - @button-depth-width);
+  @media (max-width: @screen-md-max) {
+    height: (@input-height-small - @input-border-width - @button-depth-width);
+  }
 }
 .input-group-addon.input-group-inset button span {
   padding: 0;

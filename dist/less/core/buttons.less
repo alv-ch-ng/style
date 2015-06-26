@@ -20,6 +20,10 @@
   word-break: keep-all;
 
   margin-bottom: (2*@button-depth-width);
+
+  @media (max-width: @screen-md-max) {
+    .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-small; @line-height-small; @border-radius-base);
+  }
 }
 
 .btn:active {

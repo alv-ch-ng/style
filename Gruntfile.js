@@ -67,6 +67,12 @@
                             cwd: 'src/less/',
                             src: '**/*.less',
                             dest: 'dist/less'
+                        },
+                        {
+                            expand: true,
+                            cwd: 'lib/bootstrap/',
+                            src: 'fonts/*',
+                            dest: 'dist/fonts'
                         }
                     ]
                 },

@@ -938,7 +938,7 @@ span.icon.icon--root:after {
 }
 
 .icon--before.icon--root:before,
-a[data-toggle=collapse]:before {
+a.icon--root[data-toggle=collapse]:before {
     content: "v";
     padding-right: 5px;
     position: relative;

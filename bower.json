@@ -55,5 +55,8 @@
   "license": "MIT",
   "authors": [
     "Thomas D'Ascoli <thomas@dasco.li>"
+  ],
+  "main": [
+    "dist/css/alv-ch-ng.bootstrap.css"
   ]
 }

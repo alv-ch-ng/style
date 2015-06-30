@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "angular-translate": "2.6.0",
-    "bootstrap": "v3.3.4",
+    "bootstrap": "v3.3.5",
     "bootstrapaccessibilityplugin": "v1.0.4",
     "jquery": "2.1.1",
     "ng-lodash": "latest"
@@ -45,7 +45,7 @@
   "resolutions": {
     "jquery": "~2.1.1",
     "angular": "~1.3.0",
-    "bootstrap": "v3.3.4"
+    "bootstrap": "v3.3.5"
   },
   "homepage": "https://github.com/alv-ch-ng/style",
   "description": "ALV-CH AngularJS style components",

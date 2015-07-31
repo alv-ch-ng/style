@@ -12,13 +12,18 @@
     'ngResource',
     'ngAria',
     'alv-ch-ng.core',
-    'alv-ch-ng.style'
+    'pascalprecht.translate'
   ];
 
   /**
    * The example application.
    */
   var app = angular.module('example-app', dependencies);
+
+  /**
+   * Common constants
+   */
+  app.constant('supportedLanguages', ['de', 'en']);
 
   /**
    * xSite request & routing definitions
@@ -32,7 +37,7 @@
       /** -- Routings -- **/
       var routes = [
         {path: '/', redirectTo: '/style'},
-        {path: '/style', templateUrl: '/pages/style.html', controller: 'ExampleCtrl'}
+        {path: '/style', templateUrl: 'pages/style.html', controller: 'ExampleCtrl'}
       ];
 
       for (var i = 0; i < routes.length; i++) {

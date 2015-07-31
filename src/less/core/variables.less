@@ -43,11 +43,11 @@
 @font-symbols:           'Admin Icons';
 
 // GOV.UK PROPOSAL
-@font-size-base:          17px; // gov.uk: 19px bootstrap: 14px
+@font-size-base:          2vh; //17px; // gov.uk: 19px bootstrap: 14px
 @font-size-large:         ceil((@font-size-base * 1.618));
 @font-size-small:         ceil((@font-size-base * 0.809));
 
-@font-size-h1:            49px;
+@font-size-h1:            4vh; //49px;
 @font-size-h2:            ceil((@font-size-base * 2.618));
 @font-size-h3:            ceil((@font-size-base * 1.618));
 @font-size-h4:            @font-size-base;
@@ -416,6 +416,7 @@
 //
 
 @system-alert-padding:  @grid-gutter-width*3;
+@system-alert-overlay-zindex:  2000;
 
 
 // todo check and/or delete and/or extend

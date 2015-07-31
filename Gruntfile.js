@@ -37,7 +37,12 @@
                       'lib/angular-sanitize/angular-sanitize.js',
                       'lib/angular-resource/angular-resource.js',
                       'lib/angular-scroll/angular-scroll.js',
+                      'lib/angular-aria/angular-aria.js',
                       'lib/ng-lodash/build/ng-lodash.js',
+                        'lib/angular-translate/angular-translate.js',
+                        'lib/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
+                        'lib/angular-translate-storage-local/angular-translate-storage-local.js',
+                        'lib/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
                       'lib/alv-ch-ng.core/dist/alv-ch-ng.core.js',
                       'lib/alv-ch-ng.core/dist/alv-ch-ng.core.templates.js'
                     ]
@@ -56,6 +61,19 @@
                         'dist/css/alv-ch-ng.bootstrap.css': ['src/less/style.less'],
                         'dist/css/frutiger.css': ['src/less/typo/frutiger.less'],
                         'dist/css/admin-symbols.css': ['src/less/typo/admin-symbols.less']
+                    }
+                },
+                example: {
+                    options: {
+                        paths: ['src/less'],
+                        compress: false,
+                        cleancss: true,
+                        ieCompat: true
+                    },
+                    files: {
+                        'src/example/css/alv-ch-ng.bootstrap.css': ['src/less/style.less'],
+                        'src/example/css/frutiger.css': ['src/less/typo/frutiger.less'],
+                        'src/example/css/admin-symbols.css': ['src/less/typo/admin-symbols.less']
                     }
                 }
             },
@@ -159,7 +177,7 @@
             watch: {
               less: {
                 files: 'src/less/**/*.less',
-                  tasks: ['less:prod']
+                  tasks: ['less:example']
               }
             },
             browserSync: {
@@ -187,7 +205,8 @@
 
         // DEV
         grunt.registerTask('build', ['less:prod','all-test','copy:example','uglify:example']);
-        grunt.registerTask('dev', ['build', 'browserSync:dev', 'watch']);
+        grunt.registerTask('build-dev', ['less:example','all-test','copy:example','uglify:example']);
+        grunt.registerTask('dev', ['build-dev', 'browserSync:dev', 'watch']);
 
         // Default task.
         grunt.registerTask('default', ['clean:all','all-test','copy:prod','less:prod','cssbeautifier','cssmin']);
